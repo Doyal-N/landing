@@ -10,345 +10,352 @@
 
 <body>
   <div class="container">
-    <div class="header">
-      <div class="header__logo">
-        <img src="img/head_logo.png" alt="">
-        <button class="question open_popup">Задать вопрос*</button>
-      </div>
-    </div>
-    <div class="header__menu">
-      <a href="#calc_1">
-        <h2 class="menu__title">Рассчитать стоимость</h2>
-      </a>
-      <h2 class="menu__title open_popup">Оставить заявку</h2>
-      <a href="#contacts">
-        <h2 class="menu__title">Контакты</h2>
-      </a>
-      <a href="#faq">
-        <h2 class="menu__title">Вопрос-Ответ</h2>
-      </a>
-    </div>
-
-    <div class="calculator">
+    <div class="page">
       <div class="parallax">
-        <div class="content">
+        <div class="mountains mountain-1"></div>
+        <div class="mountains mountain-2"></div>
+        <div class="mountains mountain-3"></div>
+        <div class="fog"></div>
+      </div>
+
+      <div class="wrapper">
+        <div class="header">
+          <div class="header__logo">
+            <img src="img/head_logo.png" alt="">
+            <button class="question open_popup">Задать вопрос*</button>
+          </div>
+        </div>
+        <div class="header__menu">
+          <a href="#calc_1">
+            <h2 class="menu__title">Рассчитать стоимость</h2>
+          </a>
+          <h2 class="menu__title open_popup">Оставить заявку</h2>
+          <a href="#contacts">
+            <h2 class="menu__title">Контакты</h2>
+          </a>
+          <a href="#faq">
+            <h2 class="menu__title">Вопрос-Ответ</h2>
+          </a>
+        </div>
+
+        <div class="calculator">
           <h1>Попутные перевозки грузов</h1>
-        </div>
-      </div>
-      <div class="calc_form">
-        <div class="calc_rules">
-          <p class="calc_text">Наша компания перевозит грузы как попутными машинами, что экономит Ваш бюджет, так и
-            предоставляет отдельную машину. <strong>В любом случае доставка груза осуществляется от двери до
-              двери.</strong>
-          </p>
-        </div>
-        <div class="calc_inp">
-          <form id="calc_1" action="">
-            <h3>
-              <p class="radio"><b>Выбери способ доставки груза</b></p>
+
+          <div class="first-block">
+
+            <div class="column_one">
+
+              <div class="calc_rules">
+                <p class="calc_text">Наша компания перевозит грузы как попутными машинами, что экономит Ваш бюджет, так и предоставляет отдельную машину. <strong>В любом случае доставка груза осуществляется от двери до двери.</strong></p>
+
+                <p class="calc_text text_2">Укажите контрольные точки без адреса, достаточно населенных пунктов. Либо укажите расстояние. Мы перевозим грузы попутным транспортом исключительно по межгороду и только по России.</p>
+
+                <p class="calc_text hide">Консультанты всегда готовы подсказать <strong>как дешевле отправить груз</strong>, домашний или квартирный переезд, мебель, вещи, оборудование, ТНП, технику - принимая во внимание специфику перевозки, Ваш бюджет и расстояние.</p>
+
+                <p class="calc_text"><strong>Не стесняйтесь задавать вопросы!</strong></p>
+              </div>
+            </div>
+
+            <div class="column-two">
+              <div class="calc_form">
+                <form id="calc_1" action="">
+                  <h3><p class="radio">Выбери способ доставки груза</p></h3>
+                  <p class="radio_title"><input type="radio" name="answer" checked>Попутная машина</p>
+                  <p class="radio_title"><input type="radio" name="answer" class="radio-one">Отдельное авто</p>
+                </form>
+              </div>
+
+              <div class="calc_way">
+                <form class="calc_input">
+                  <h3><p class="radio radio_place"><b>Введи точку погрузки-выгрузки</b></p></h3>
+                  <span class="calc_text" style="border: 1px solid red;">К примеру, Пенза - Одинцово</span>
+
+                  <label class="place_label" for="place_a">Откуда</label>
+                  <p class="img_input">
+                    <img src="img/bus.png" alt="">
+                    <input class="input_place input_text" id="boxfrom" type="text" size="25" value="" maxlength="30"
+                      required placeholder="Место погрузки" name="place_a">
+                  </p>
+
+                  <label class="place_label" for="place_b">Куда</label>
+                  <p class="img_input">
+                    <img src="img/gps.png" alt=""> <input class="input_place input_text" id="boxin" type="text"
+                      size="25" value="" maxlength="30" required placeholder="Место выгрузки" name="place_b">
+                  </p>
+
+                  <label class="place_label" for="way">Расстояние (км)</label>
+                  <p class="img_way">
+                    <img src="img/rule.png" alt="">
+                    <input type="text" id="LengthPathForm" maxlength="5" class="input_way input_number" size="25"
+                      name="way">
+                  </p>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="calc_param">
+            <h3 class="param_title">
+              <p class="radio"><b>Укажи вес груза для расчета</b></p>
             </h3>
-            <p class="radio_title"><input type="radio" name="answer" checked>Попутная машина<br></p>
-            <p class="radio_title"><input type="radio" class="radio-one" name="answer">Отдельное авто<br></p>
-          </form>
+            <div class="calc_range">
+              <div class="range_kg">
+                <input class="input_range input_kg" type="range" min="0" max="1000" step="100" value="0">
+                <div class="title_range__kg range_k">0 кг</div>
+              </div>
+              <div class="weight">
+                <label for="weight" class="label_weight"><b>ВЕС(тн)</b></label>
+                <input type="text" class="input_weight input_number" maxlength="4" value="" required name="weight"
+                  size="7">
+              </div>
+              <div class="range_tn">
+                <input class="input_range input_tn" type="range" min="0" max="30" step="1" value="0">
+                <div class="title_range__tn range_t">0 тн</div>
+              </div>
+            </div>
+            <p class="calc_text">Указывайте вес - груз до тонны включительно <i>(левый ползунок)</i>, от 1 тонны до 30 -
+              <i>правый ползунок</i>. Выбранные параметры при расчете суммируются.</p>
+          </div>
+          <h3 class="param_title">
+            <p class="radio"><b>Укажи дополнительные параметры</b></p>
+          </h3>
+          <div class="calc_extra">
+            <div class="calc_volume">
+              <div class="volume_param">
+                <p class="param_text">Объем груза - важный параметр, от которого зависит стоимость, если Вы не понимаете
+                  как
+                  его определить, воспользуйтесь <a href="#" class="help">сервисом</a> или оставьте заявку на бесплатный
+                  расчет по телефону или почте.<button class="lid open_popup">Консультация</button></p>
+                <label for="volume" class="volume_label"><b>Объем груза (Длина * Ширина * Высота)</b></label>
+                <input class="input_volume input_number" maxlength="4" placeholder="м3" type="text" value=""
+                  name="volume">
+              </div>
+              <div class="volume_text">
+                <p class="param_text"><em>Для примера</em> - переезд 1-комнатной квартиры занимает 14-18 кубов,
+                  2-комнатной
+                  от 20-25 м3.</p>
+                <p class="param_text text_none">Мы поможет точно определить необходимую длину кузова для Вашего груза,
+                  задав
+                  несколько уточняющих вопросов, чтобы Вы не переплачивали, ориентируясь "на глаз".</p>
+                <p class="param_text text_none"><strong>Договор на перевозку заключается после обсуждения всех
+                    условий!</strong></p>
+              </div>
+            </div>
+            <div class="calc_pass">
+              <form action="" name="pass" class="form_pass">
+                <img src="img/family.png" alt="">
+                <select class="select_pass" name="pass" id="pass">
+                  <option value="0">Без пассажиров</option>
+                  <option value="1">Пассажир</option>
+                </select>
+              </form>
+              <p class="calc_text pass_text">Дополнительные люди в кабине с водителем - неудобство в отдыхе для
+                пассажира и
+                шофера, что компенсируется повышенной стоимостью. Но бывает мы берем пассажиров, <strong>если позволяют
+                  условия и не вредит графику</strong>.</p>
+              <div class="total">
+                <label for="cost" class="label_cost"><strong>Стоимость:</strong></label>
+                <input class="cost_input" type="text" name="cost" value="0" disabled>
+              </div>
+              <div class="button_block">
+                <button class="clear">Сбросить</button>
+                <button class="calculate">Рассчитать</button>
+              </div>
+              <p class="prim_text">***Полученные цены не являются окончательными, но максимально приближенны к реальным.
+                На
+                договорные цены влияют Ваши дополнительные условия, дата и сроки, наличие свободного (в том числе и
+                попутного) транспорта.</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="calc_way">
-        <div class="calc_rules">
-          <p class="calc_text text_2">Укажите контрольные точки без адреса, достаточно населенных пунктов. Либо укажите
-            расстояние. Мы перевозим грузы попутным транспортом исключительно по межгороду и только по России.</p>
-          <p class="calc_text hide">Консультанты всегда готовы подсказать <strong>как дешевле отправить груз</strong>,
-            домашний
-            или квартирный переезд, мебель, вещи, оборудование, ТНП, технику - принимая во внимание специфику перевозки,
-            Ваш
-            бюджет и расстояние.</p>
-          <p class="calc_text"><strong>Не стесняйтесь задавать вопросы!</strong></p>
-        </div>
-        <div class="calc_place">
-          <form class="calc_input">
-            <h3>
-              <p class="radio radio_place"><b>Введи точку погрузки-выгрузки</b></p>
-            </h3>
-            <span class="calc_text" style="border: 1px solid red;">К примеру, Пенза - Одинцово</span>
-            <label class="place_label" for="place_a">Откуда</label>
-            <p class="img_input">
-              <img src="img/bus.png" alt="">
-              <input class="input_place input_text" id="boxfrom" type="text" size="25" value="" maxlength="30" required
-                placeholder="Место погрузки" name="place_a">
+
+        <h2 class="works_title">Отзывы</h2>
+        <div class="feedback_all">
+          <div class="feedback">
+            <p>Второй год перевозим кормовые добавки компанией Меркурий от 1 тонны и до 3, цены ниже, чем у остальных
+              перевозчиков. Груз приходит быстро, водители ответственные и знают свою работу. Всегда подскажут как лучше
+              и
+              оптимально привезти груз, уложившись в бюджет нашей фирмы.
+              <b>Центр ездовых собак.</b>
             </p>
-            <label class="place_label" for="place_b">Куда</label>
-            <p class="img_input">
-              <img src="img/gps.png" alt=""> <input class="input_place input_text" id="boxin" type="text" size="25"
-                value="" maxlength="30" required placeholder="Место выгрузки" name="place_b">
+          </div>
+          <div class="feedback">
+            <p>Очень доволен, что начал сотрудничать с данной ТК. Часто возникает необходимость отправить станок по
+              Вологодской или Архангельской области, выручает Меркурий. Иногда приходится ждать попутную машину 4-6
+              дней, но
+              зато цена радует и заказчики довольны.
+              <b>ООО "Морис"</b>
             </p>
-            <label class="place_label" for="way">Расстояние (км)</label>
-            <p class="img_way">
-              <img src="img/rule.png" alt="">
-              <input type="text" id="LengthPathForm" maxlength="5" class="input_way input_number" size="25" name="way">
+          </div>
+          <div class="feedback">
+            <p>Покупал автовышку на Сахалине, думал придется очень хорошо раскошелиться, так как доставить надо было в
+              Краснодарский край, через всю страну почти. Но сотрудники ТК Меркурий помогли организовать доставку по
+              приемлемой цене. По мне вышло очень дешево, рассчитывал в два раза дороже.
+              <b>Олег, Краснодар</b>
             </p>
-          </form>
-        </div>
-      </div>
-      <div class="calc_param">
-        <h3 class="param_title">
-          <p class="radio"><b>Укажи вес груза для расчета</b></p>
-        </h3>
-        <div class="calc_range">
-          <div class="range_kg">
-            <input class="input_range input_kg" type="range" min="0" max="1000" step="100" value="0">
-            <div class="title_range__kg range_k">0 кг</div>
           </div>
-          <div class="weight">
-            <label for="weight" class="label_weight"><b>ВЕС(тн)</b></label>
-            <input type="text" class="input_weight input_number" maxlength="4" value="" required name="weight" size="7">
+          <div class="feedback">
+            <p>Переезжали из Геленджика в Свердловскую область. Вещей было много (3-х комнатная квартира и гараж).
+              Ребята
+              перевезли все домашние вещи на фуре, доехало в отличном состоянии, не побилось. Мы сами хорошо
+              упаковывали.
+              Груз прибыл на 3-ий день. Без перегрузов и складов.
+              <b>Сергей, Екатеринбург</b>
+            </p>
           </div>
-          <div class="range_tn">
-            <input class="input_range input_tn" type="range" min="0" max="30" step="1" value="0">
-            <div class="title_range__tn range_t">0 тн</div>
+          <div class="feedback">
+            <p>Занимаемся производством мебели и встает вопрос отправки товара по России. Пользуемся только ТК Меркурий,
+              пытались отправлять иными ТК, но цены в два-три раза дороже + перегрузка, складская логистика. Отчего
+              мебель
+              приходит к заказчику со сколами. Здесь такого не бывало.
+              <b>ИП Железнова, Пензенская обл.</b>
+            </p>
           </div>
-        </div>
-        <p class="calc_text">Указывайте вес - груз до тонны включительно <i>(левый ползунок)</i>, от 1 тонны до 30 -
-          <i>правый ползунок</i>. Выбранные параметры при расчете суммируются.</p>
-      </div>
-      <h3 class="param_title">
-        <p class="radio"><b>Укажи дополнительные параметры</b></p>
-      </h3>
-      <div class="calc_extra">
-        <div class="calc_volume">
-          <div class="volume_param">
-            <p class="param_text">Объем груза - важный параметр, от которого зависит стоимость, если Вы не понимаете как
-              его определить, воспользуйтесь <a href="#" class="help">сервисом</a> или оставьте заявку на бесплатный
-              расчет по телефону или почте.<button class="lid open_popup">Консультация</button></p>
-            <label for="volume" class="volume_label"><b>Объем груза (Длина * Ширина * Высота)</b></label>
-            <input class="input_volume input_number" maxlength="4" placeholder="м3" type="text" value="" name="volume">
+          <div class="feedback">
+            <p>Занимаюсь спецтехникой с торгов. Покупаешь в одном месте, продаешь в другое,транспортные расходы бьют по
+              выгоде. Начал отправлять технику (снегоходы, квадрики, трактора), сотрудничая с Меркурием и счастлив.
+              Траты
+              упали, стало больше оборотных средств. Спасибо. Реальные цены.
+              <b>Леонид, Омская обл.</b>
+            </p>
           </div>
-          <div class="volume_text">
-            <p class="param_text"><em>Для примера</em> - переезд 1-комнатной квартиры занимает 14-18 кубов, 2-комнатной
-              от 20-25 м3.</p>
-            <p class="param_text text_none">Мы поможет точно определить необходимую длину кузова для Вашего груза, задав
-              несколько уточняющих вопросов, чтобы Вы не переплачивали, ориентируясь "на глаз".</p>
-            <p class="param_text text_none"><strong>Договор на перевозку заключается после обсуждения всех
-                условий!</strong></p>
+          <div class="feedback">
+            <p>У меня был странный переезд наверно.) Вещей мало, пассажир и клетки с кошками, думала нереально найти
+              того,
+              кто согласился бы поехать (две ночи в пути). Помогли сотрудники данной фирмы, подсказали, подобрали машину
+              по
+              пути и я уехала. Водителю Николаю отдельное спасибо. Хорошо помог.
+              <b>Лилия, Казань</b>
+            </p>
+          </div>
+          <div class="feedback">
+            <p>Разбирал большой ангар, надо было перевезти в Татарстан. 1000 км пути. Зашел на сайт, оставил заявку.
+              Подсказали как быть. За два дня удалось увезти весь груз. А это 14 машин по 20 тонн. Вся организация на
+              высоте, каждый четко знает свою работу. Даже думать не пришлось).
+              <b>Альберт, Набережные Челны</b>
+            </p>
           </div>
         </div>
-        <div class="calc_pass">
-          <form action="" name="pass" class="form_pass">
-            <img src="img/family.png" alt="">
-            <select class="select_pass" name="pass" id="pass">
-              <option value="0">Без пассажиров</option>
-              <option value="1">Пассажир</option>
-            </select>
-          </form>
-          <p class="calc_text pass_text">Дополнительные люди в кабине с водителем - неудобство в отдыхе для пассажира и
-            шофера, что компенсируется повышенной стоимостью. Но бывает мы берем пассажиров, <strong>если позволяют
-              условия и не вредит графику</strong>.</p>
-          <div class="total">
-            <label for="cost" class="label_cost"><strong>Стоимость:</strong></label>
-            <input class="cost_input" type="text" name="cost" value="0" disabled>
-          </div>
-          <div class="button_block">
-            <button class="clear">Сбросить</button>
-            <button class="calculate">Рассчитать</button>
-          </div>
-          <p class="prim_text">***Полученные цены не являются окончательными, но максимально приближенны к реальным. На
-            договорные цены влияют Ваши дополнительные условия, дата и сроки, наличие свободного (в том числе и
-            попутного) транспорта.</p>
-        </div>
-      </div>
-    </div>
 
-    <h2 class="works_title">Рабочие будни и отзывы</h2>
-    <div class="underline"></div>
-    <div class="slider middle">
-      <div class="slides">
-        <input type="radio" name="radio" id="r1" checked>
-        <input type="radio" name="radio" id="r2">
-        <input type="radio" name="radio" id="r3">
-        <input type="radio" name="radio" id="r4">
-
-        <div class="slide s1">
-          <img src="img/works/01.jpg" alt="переезд">
-        </div>
-        <div class="slide">
-          <img src="img/works/02.jpg" alt="перевозка спецтехники">
-        </div>
-        <div class="slide">
-          <img src="img/works/03.jpg" alt="погрузка корма для собак">
-        </div>
-        <div class="slide">
-          <img src="img/works/04.jpg" alt="трактор на транспортировку">
-        </div>
-      </div>
-
-      <div class="navigation">
-        <label for="r1" class="bar"></label>
-        <label for="r2" class="bar"></label>
-        <label for="r3" class="bar"></label>
-        <label for="r4" class="bar"></label>
-      </div>
-    </div>
-
-    <div class="feedback_all">
-      <div class="feedback">
-        <p>Второй год перевозим кормовые добавки компанией Меркурий от 1 тонны и до 3, цены ниже, чем у остальных
-          перевозчиков. Груз приходит быстро, водители ответственные и знают свою работу. Всегда подскажут как лучше и
-          оптимально привезти груз, уложившись в бюджет нашей фирмы.
-          <b>Центр ездовых собак.</b>
-        </p>
-      </div>
-      <div class="feedback">
-        <p>Очень доволен, что начал сотрудничать с данной ТК. Часто возникает необходимость отправить станок по
-          Вологодской или Архангельской области, выручает Меркурий. Иногда приходится ждать попутную машину 4-6 дней, но
-          зато цена радует и заказчики довольны.
-          <b>ООО "Морис"</b>
-        </p>
-      </div>
-      <div class="feedback">
-        <p>Покупал автовышку на Сахалине, думал придется очень хорошо раскошелиться, так как доставить надо было в
-          Краснодарский край, через всю страну почти. Но сотрудники ТК Меркурий помогли организовать доставку по
-          приемлемой цене. По мне вышло очень дешево, рассчитывал в два раза дороже.
-          <b>Олег, Краснодар</b>
-        </p>
-      </div>
-      <div class="feedback">
-        <p>Переезжали из Геленджика в Свердловскую область. Вещей было много (3-х комнатная квартира и гараж). Ребята
-          перевезли все домашние вещи на фуре, доехало в отличном состоянии, не побилось. Мы сами хорошо упаковывали.
-          Груз прибыл на 3-ий день. Без перегрузов и складов.
-          <b>Сергей, Екатеринбург</b>
-        </p>
-      </div>
-      <div class="feedback">
-        <p>Занимаемся производством мебели и встает вопрос отправки товара по России. Пользуемся только ТК Меркурий,
-          пытались отправлять иными ТК, но цены в два-три раза дороже + перегрузка, складская логистика. Отчего мебель
-          приходит к заказчику со сколами. Здесь такого не бывало.
-          <b>ИП Железнова, Пензенская обл.</b>
-        </p>
-      </div>
-      <div class="feedback">
-        <p>Занимаюсь спецтехникой с торгов. Покупаешь в одном месте, продаешь в другое,транспортные расходы бьют по
-          выгоде. Начал отправлять технику (снегоходы, квадрики, трактора), сотрудничая с Меркурием и счастлив. Траты
-          упали, стало больше оборотных средств. Спасибо. Реальные цены.
-          <b>Леонид, Омская обл.</b>
-        </p>
-      </div>
-      <div class="feedback">
-        <p>У меня был странный переезд наверно.) Вещей мало, пассажир и клетки с кошками, думала нереально найти того,
-          кто согласился бы поехать (две ночи в пути). Помогли сотрудники данной фирмы, подсказали, подобрали машину по
-          пути и я уехала. Водителю Николаю отдельное спасибо. Хорошо помог.
-          <b>Лилия, Казань</b>
-        </p>
-      </div>
-      <div class="feedback">
-        <p>Разбирал большой ангар, надо было перевезти в Татарстан. 1000 км пути. Зашел на сайт, оставил заявку.
-          Подсказали как быть. За два дня удалось увезти весь груз. А это 14 машин по 20 тонн. Вся организация на
-          высоте, каждый четко знает свою работу. Даже думать не пришлось).
-          <b>Альберт, Набережные Челны</b>
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion">
-      <h2 class="faq_title" id="faq">Вопрос - Ответ</h2>
-      <div class="accordion_item">
-        <input class="input_accordion" type="radio" name="content" id="faq-1">
-        <label for="faq-1" class="item_trigger">Как происходит сотрудничество, расскажите поэтапно что делать?</label>
-        <div class="item_one">
-          <p>Вы звоните или оставляете заявку на консультацию, связывается наш логист и, задав несколько уточняющих
-            вопросов по грузу и вашим условиям, рассказывает как осуществить перевозку лучше, как дешевле. Получится ли
-            это сделать попутными машинами и в какие сроки.</p>
-          <p>Если вам нужна пока лишь информация на будущее, то на этом все - связываетесь по мере надобности.</p>
-          <p>Если же у вас перевозка с конкретными датами, то можете оставить заявку на машину. Мы подберем авто,
-            заключим договор перевозки груза посредством электронной почты. У вас будут документы на водителя и на
-            автотранспорт (для спокойствия и гарантии).</p>
-          <p>В назначенное время машина приедет, заберет груз. На выгрузке, встречаете машину, проверяете сохранность
-            груза, расплачиваетесь и разгружаетесь.</p>
-          <p>Вы праве в любое время звонить хоть логисту, хоть водителя для контроля движения. Спрашивать, где
-            автомобиль сейчас, на какое время ориентироваться на выгрузку, решать любые вопросы связанные с перевозкой.
-            <b>Такие вопросы решаются круглосуточно, вне зависимости от рабочего времени.</b></p>
-          <button class="lead open_popup">Оставить заявку</button>
-        </div>
-      </div>
-      <div class="accordion_item">
-        <input class="input_accordion" type="radio" name="content" id="faq-2">
-        <label for="faq-2" class="item_trigger">Вы работаете по России?</label>
-        <div class="item_content">Да, наша компания работает только по территории России и только на межгороде. Не
-          перевозим грузы в пределах одного города. Попутный транспорт бывает только по междугородним маршрутам.</div>
-      </div>
-      <div class="accordion_item">
-        <input class="input_accordion" type="radio" name="content" id="faq-3">
-        <label for="faq-3" class="item_trigger">Какие грузы вы перевозите?</label>
-        <div class="item_content">Специализируемся на перевозках любых грузов <strong>от 200 кг до 25 тонн</strong>. Это
-          могут быть домашние переезды, перевозка мебели и личных вещей, перевозка товаров, техники, автомобилей,
-          продуктов и так далее. У нас есть подходящий автотранспорт для каждой категории груза, кроме перевозки
-          животных (скот, лошади и т.п). <p> Занимаемся и негабаритными перевозками - на которые надо получать
-            разрешение. Разрешение начинаем оформлять после подписания договора, чтобы не тратить свои деньги просто
-            так, если у вас изменятся планы.</p>
-          <p>Бывает берем в работу груз меньше 200 кг, но редко и при условии, что способны увезти его дешевле, чем иные
-            ТК. Иначе нет смысла городить огород. Мелкие посылки до 50 кг, коробки, людей без груза <strong>НЕ
-              ПЕРЕВОЗИМ</strong>. Для этого есть почта РФ, службы мелкой доставки, сборные складские перевозки и
-            легковые авто - не наша специализация.</p>
-        </div>
-      </div>
-      <div class="accordion_item">
-        <input class="input_accordion" type="radio" name="content" id="faq-4">
-        <label for="faq-4" class="item_trigger">Вы перевозите животных вместе с домашними вещами?</label>
-        <div class="item_content">Бывает такое. Без фанантизма, конечно. Одну собаку, кошку и тем более, если животные в
-          клетке (идеальный случай) почему бы и не взять. Это рассматривается в индивидуальном порядке. Иногда наши
-          водители перевозят собак, которые ищут хозяев, по России. Помогают волонтерам. Главное не в ущерб делу.</div>
-      </div>
-      <div class="accordion_item">
-        <input class="input_accordion" type="radio" name="content" id="faq-5">
-        <label for="faq-5" class="item_trigger">Чем гарантирована сохранность вещей?</label>
-        <div class="item_content">Во-первых, разумностью. Мы занимаемся грузоперевозками давно и хотим еще больше
-          довольных клиентов для сарафаннного радио, а не пару сворованных коробок с тарелками)). Во-вторых, у вас
-          заключен договор перед погрузкой вещей, по которому мы несем ответственность за доставку груза. В-третьих, у
-          заказчика на руках документы на перевозчика, он не отдает груз незнакомому дяде Васе с улицы.</div>
-      </div>
-    </div>
-
-    <div class="footer_menu">
-      <div class="contacts" id="contacts">
-        <h3>Группа ТК Меркурий</h3>
-        <p class="footer_text">Междугородние попутные грузоперевозки по городам России</p>
-        <p class="footer_text">Офисы и представительства в городах РФ</p>
-        <p class="footer_text">Головной офис: Челябинск, ул. Наркома Малышева, 3(цоколь)</p>
-      </div>
-      <button class="lead open_popup">Спросить логиста</button>
-    </div>
-
-    <div id="popup" class="popup">
-      <div class="popup_body">
-        <div class="popup_content">
-          <button class="popup_close"></button>
-          <div class="popup_title">Введите данные</div>
-          <form action="send.php" method="POST" class="popup_form">
-            <div class="input-group modal_input-group">
-              <label for="user-name" class="label form_label">Имя</label>
-              <input type="text" name="user_name" maxlength="20" class="input_text modal_input" id="user-name"
-                placeholder="Как вас зовут:">
+        <div class="accordion">
+          <h2 class="faq_title" id="faq">Вопрос - Ответ</h2>
+          <div class="accordion_item">
+            <input class="input_accordion" type="radio" name="content" id="faq-1">
+            <label for="faq-1" class="item_trigger">Как происходит сотрудничество, расскажите поэтапно что
+              делать?</label>
+            <div class="item_one">
+              <p>Вы звоните или оставляете заявку на консультацию, связывается наш логист и, задав несколько уточняющих
+                вопросов по грузу и вашим условиям, рассказывает как осуществить перевозку лучше, как дешевле. Получится
+                ли
+                это сделать попутными машинами и в какие сроки.</p>
+              <p>Если вам нужна пока лишь информация на будущее, то на этом все - связываетесь по мере надобности.</p>
+              <p>Если же у вас перевозка с конкретными датами, то можете оставить заявку на машину. Мы подберем авто,
+                заключим договор перевозки груза посредством электронной почты. У вас будут документы на водителя и на
+                автотранспорт (для спокойствия и гарантии).</p>
+              <p>В назначенное время машина приедет, заберет груз. На выгрузке, встречаете машину, проверяете
+                сохранность
+                груза, расплачиваетесь и разгружаетесь.</p>
+              <p>Вы праве в любое время звонить хоть логисту, хоть водителя для контроля движения. Спрашивать, где
+                автомобиль сейчас, на какое время ориентироваться на выгрузку, решать любые вопросы связанные с
+                перевозкой.
+                <b>Такие вопросы решаются круглосуточно, вне зависимости от рабочего времени.</b></p>
+              <button class="lead open_popup">Оставить заявку</button>
             </div>
-            <div class="input-group modal_input-group">
-              <label for="user-phone" class="label form_label">Телефон</label>
-              <input type="tel" name="user_phone" required class="modal_input" id="user-phone"
-                placeholder="Номер телефона:">
+          </div>
+          <div class="accordion_item">
+            <input class="input_accordion" type="radio" name="content" id="faq-2">
+            <label for="faq-2" class="item_trigger">Вы работаете по России?</label>
+            <div class="item_content">Да, наша компания работает только по территории России и только на межгороде. Не
+              перевозим грузы в пределах одного города. Попутный транспорт бывает только по междугородним маршрутам.
             </div>
-            <div class="input-group modal_input-group">
-              <label for="user-email" class="label form_label">Email</label>
-              <input type="email" name="user_email" maxlength="35" class="modal_input" id="user-email"
-                placeholder="Ваш Email:">
+          </div>
+          <div class="accordion_item">
+            <input class="input_accordion" type="radio" name="content" id="faq-3">
+            <label for="faq-3" class="item_trigger">Какие грузы вы перевозите?</label>
+            <div class="item_content">Специализируемся на перевозках любых грузов <strong>от 200 кг до 25 тонн</strong>.
+              Это
+              могут быть домашние переезды, перевозка мебели и личных вещей, перевозка товаров, техники, автомобилей,
+              продуктов и так далее. У нас есть подходящий автотранспорт для каждой категории груза, кроме перевозки
+              животных (скот, лошади и т.п). <p> Занимаемся и негабаритными перевозками - на которые надо получать
+                разрешение. Разрешение начинаем оформлять после подписания договора, чтобы не тратить свои деньги просто
+                так, если у вас изменятся планы.</p>
+              <p>Бывает берем в работу груз меньше 200 кг, но редко и при условии, что способны увезти его дешевле, чем
+                иные
+                ТК. Иначе нет смысла городить огород. Мелкие посылки до 50 кг, коробки, людей без груза <strong>НЕ
+                  ПЕРЕВОЗИМ</strong>. Для этого есть почта РФ, службы мелкой доставки, сборные складские перевозки и
+                легковые авто - не наша специализация.</p>
             </div>
-            <div class="policy modal_policy">
-              <input type="checkbox" name="policy-checkbox" id="policy-checkbox-modal" checked class="policy_checkbox">
-              <label for="policy-checkbox-modal" class="policy_label">Я соглашаюсь с обработкой данных</label>
+          </div>
+          <div class="accordion_item">
+            <input class="input_accordion" type="radio" name="content" id="faq-4">
+            <label for="faq-4" class="item_trigger">Вы перевозите животных вместе с домашними вещами?</label>
+            <div class="item_content">Бывает такое. Без фанантизма, конечно. Одну собаку, кошку и тем более, если
+              животные в
+              клетке (идеальный случай) почему бы и не взять. Это рассматривается в индивидуальном порядке. Иногда наши
+              водители перевозят собак, которые ищут хозяев, по России. Помогают волонтерам. Главное не в ущерб делу.
             </div>
-            <div class="popup_button"><button class="form_button">Отправить</button></div>
-          </form>
-          <div class="popup_text">*Личные данные используются для оказания транспортных услуг и не передаются третьим
-            лицам. Консультации по транспортным услугам, ценам, способам доставки - бесплатны.</div>
+          </div>
+          <div class="accordion_item">
+            <input class="input_accordion" type="radio" name="content" id="faq-5">
+            <label for="faq-5" class="item_trigger">Чем гарантирована сохранность вещей?</label>
+            <div class="item_content">Во-первых, разумностью. Мы занимаемся грузоперевозками давно и хотим еще больше
+              довольных клиентов для сарафаннного радио, а не пару сворованных коробок с тарелками)). Во-вторых, у вас
+              заключен договор перед погрузкой вещей, по которому мы несем ответственность за доставку груза. В-третьих,
+              у
+              заказчика на руках документы на перевозчика, он не отдает груз незнакомому дяде Васе с улицы.</div>
+          </div>
+        </div>
+
+        <div class="footer_menu">
+          <div class="contacts" id="contacts">
+            <h3>Группа ТК Меркурий</h3>
+            <p class="footer_text">Междугородние попутные грузоперевозки по городам России</p>
+            <p class="footer_text">Офисы и представительства в городах РФ</p>
+            <p class="footer_text">Головной офис: Челябинск, ул. Наркома Малышева, 3(цоколь)</p>
+          </div>
+          <button class="lead open_popup">Спросить логиста</button>
+        </div>
+
+        <div id="popup" class="popup">
+          <div class="popup_body">
+            <div class="popup_content">
+              <button class="popup_close"></button>
+              <div class="popup_title">Введите данные</div>
+              <form action="send.php" method="POST" class="popup_form">
+                <div class="input-group modal_input-group">
+                  <label for="user-name" class="label form_label">Имя</label>
+                  <input type="text" name="user_name" maxlength="20" class="input_text modal_input" id="user-name"
+                    placeholder="Как вас зовут:">
+                </div>
+                <div class="input-group modal_input-group">
+                  <label for="user-phone" class="label form_label">Телефон</label>
+                  <input type="tel" name="user_phone" required class="modal_input" id="user-phone"
+                    placeholder="Номер телефона:">
+                </div>
+                <div class="input-group modal_input-group">
+                  <label for="user-email" class="label form_label">Email</label>
+                  <input type="email" name="user_email" maxlength="35" class="modal_input" id="user-email"
+                    placeholder="Ваш Email:">
+                </div>
+                <div class="policy modal_policy">
+                  <input type="checkbox" name="policy-checkbox" id="policy-checkbox-modal" checked
+                    class="policy_checkbox">
+                  <label for="policy-checkbox-modal" class="policy_label">Я соглашаюсь с обработкой данных</label>
+                </div>
+                <div class="popup_button"><button class="form_button">Отправить</button></div>
+              </form>
+              <div class="popup_text">*Личные данные используются для оказания транспортных услуг и не передаются
+                третьим
+                лицам. Консультации по транспортным услугам, ценам, способам доставки - бесплатны.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/length_path.js"></script>
   <script src="js/calc.js"></script>

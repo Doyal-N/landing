@@ -69,5 +69,7 @@ buttonCalculate.addEventListener('click', function() {
   let total = (calc.getWeight() + calc.getVolume()) * calc.getDistance() * calc.knowShoiceDelivery(),
   expTotal = 700 + calc.getPass();
 
-  costInput.value = (total + expTotal).toFixed(2)
+  if(total != 0) {
+    costInput.value = (total + expTotal).toFixed(2)
+  }
 })

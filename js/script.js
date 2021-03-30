@@ -1,5 +1,35 @@
 'use strict';
 
+//parallax
+$(document).ready(function() {
+  $(window).scroll(function(event) {
+    var top = $(this).scrollTop(),
+      width = $(this).outerWidth(),
+      content = $('.wrapper').outerHeight(),
+      parallax = $('.parallax').outerHeight(),
+      procent = top / content * 100,
+      paraProcent = top / parallax * 100,
+      opacity = 1 - 1 / 100 * paraProcent;
+      var z = 1 +(width / 10000 * paraProcent);
+
+      $('.fog').css('transform', 'scale('+z+')');
+      $('.fog').css('opacity', opacity)
+
+      var bigMountain = 1 + (width / 1000000 * procent)
+      $('.mountain-1').css('transform', 'scale('+bigMountain+')');
+
+      var hr = width / 2000 * paraProcent,
+      z2 = 1 + (width * 0.000005 * paraProcent)
+      $('.mountain-2').css('transform', 'translate3d('+hr+'px, 0, 0) scale('+z2+')');
+
+      var hr2 = width / 1500 * paraProcent,
+      z3 = 1 + (width * 0.00001 * paraProcent)
+      $('.mountain-3').css('transform', 'translate3d('+hr2+'px, 0, 0) scale('+z3+')')
+
+      $('.wrapper').css('z-index', '2')
+  });
+});
+
 //открытие-закрытие попап
 const togglePopup = () => {
   const openPopup = document.querySelectorAll('.open_popup'),
