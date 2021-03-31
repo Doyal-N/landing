@@ -301,7 +301,7 @@ input[type~="text"] {
 }
 
 .weight {
-  width: 6.5rem;
+  width: 7.5rem;
 }
 
 .input_range {
@@ -755,8 +755,12 @@ body {
 
   .container,
   .wrapper {
-    width: 80%;
+    width: 85%;
     margin: auto;
+  }
+
+  .range_kg {
+    flex-basis: 40%;
   }
 }
 
@@ -782,8 +786,38 @@ body {
 
   .container,
   .wrapper {
-    width: 92%;
+    width: 85%;
     margin: auto;
+  }
+
+  .calc_range {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+@media (max-width: 950px) {
+  .first-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__logo .question {
+    margin-top: 1.5rem;
+  }
+
+  .header__logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calc_extra {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -803,8 +837,8 @@ body {
   }
 
   .feedback_all {
-    width: 98%;
-    margin: auto;
+    flex-direction: column;
+    align-items: center;
   }
 
   .accordion {
@@ -817,11 +851,6 @@ body {
     margin: auto;
   }
 
-  .container,
-  .wrapper {
-    width: 110%;
-    margin: auto;
-  }
 }
 
 @media (max-width: 800px) {
@@ -840,7 +869,7 @@ body {
   }
 
   .calc_input {
-    width: 22rem;
+    width: 23rem;
   }
 
   .label_weight {
@@ -860,16 +889,9 @@ body {
     font-weight: bold;
   }
 
-  .container {
-    width: 125%;
-    margin: auto;
-  }
-}
-
-@media (max-width: 700px) {
-  .container {
-    width: 145%;
-    margin: auto;
+  .footer_menu {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -878,25 +900,36 @@ body {
     width: 23rem;
   }
 
+  .header__logo img {
+    width: 22rem;
+  }
+
   .container {
-    width: 170%;
+    width: 85%;
     margin: auto;
   }
+
+  .calc_rules {
+    width: 28rem;
+  }
+
 }
 
-@media (max-width: 500px) {
+@media (max-width: 510px) {
   .weight {
     width: 8.5rem;
+  }
+
+  .calc_rules {
+    width: 20rem;
   }
 
   .volume_label {
     font-size: 1.7rem;
   }
 
-  .feedback_all {
-    width: 98%;
-    margin: auto;
-    top: 1rem;
+  .column_one {
+    width: 70%;
   }
 
   .accordion {
@@ -911,272 +944,9 @@ body {
     top: 1rem;
   }
 
-  .container {
-    width: 210%;
+  .container,
+  .wrapper {
+    width: 97%;
     margin: auto;
-  }
-}
-
-@media (max-width: 420px) {
-  h1 {
-    font-size: 4rem;
-    margin-top: -20px;
-  }
-
-  .question {
-    width: 17rem;
-    height: 3rem;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .header__menu {
-    display: none;
-  }
-
-  .calculator {
-    max-width: 90%;
-    margin: auto;
-    margin-right: 2rem;
-    margin-left: 2rem;
-  }
-
-  .calc_title {
-    font-size: 2.5rem;
-  }
-
-  .radio {
-    font-size: 2rem;
-    margin-bottom: 0;
-  }
-
-  .hide {
-    display: none;
-  }
-
-  .calc_inp {
-    margin-bottom: 1rem;
-    margin-top: -2rem;
-    width: 90%;
-    margin-left: 2rem;
-  }
-
-  .radio_title {
-    font-size: 2.4rem;
-    margin-bottom: 0;
-    margin-top: 0.5rem;
-  }
-
-  .calc_rules {
-    width: 90%;
-    margin: auto;
-    margin-right: 2rem;
-    margin-left: 2rem;
-  }
-
-  .text_2 {
-    margin-left: -2rem;
-  }
-
-  .radio_place {
-    width: 136%;
-  }
-
-  .calc_text {
-    line-height: 2.2rem;
-    font-size: 2rem;
-  }
-
-  .img_input {
-    width: 45rem;
-  }
-
-  .place_label {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  input::-webkit-input-placeholder {
-    font-size: 2rem;
-  }
-
-  input::-moz-placeholder {
-    font-size: 2rem;
-  }
-
-  input:-ms-input-placeholder {
-    font-size: 2rem;
-  }
-
-  input::-ms-input-placeholder {
-    font-size: 2rem;
-  }
-
-  input::placeholder {
-    font-size: 2rem;
-  }
-
-  input[type~="text"] {
-    font-size: 2.4rem;
-    height: 3rem;
-    font-weight: bold;
-  }
-
-  .calc_input {
-    width: 80%;
-    margin: 0;
-  }
-
-  .calc_range {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  .calc_param {
-    width: 90%;
-    margin: auto;
-    margin-right: 2rem;
-    margin-left: 2rem;
-  }
-
-  .weight {
-    margin-left: 0rem;
-  }
-
-  .label_weight {
-    margin-left: -11rem;
-    font-size: 1.5rem;
-  }
-
-  .input_range {
-    width: 90%;
-    height: 3rem;
-    margin: auto;
-    margin-right: 2rem;
-  }
-
-  .param_title {
-    margin-top: -2.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .input_weight {
-    margin-left: 0rem;
-  }
-
-  .calc_volume {
-    margin-left: 2rem;
-  }
-
-  .select_pass {
-    font-size: 1.4rem;
-  }
-
-  .text_none {
-    display: none;
-  }
-
-  .param_text {
-    line-height: 2.2rem;
-    font-size: 2rem;
-  }
-
-  .lid {
-    font-size: 1.4rem;
-    width: 14rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .button_block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-  }
-
-  .calculate {
-    font-size: 1.4rem;
-    width: 14rem;
-  }
-
-  .clear {
-    margin-top: 1rem;
-    font-size: 1.4rem;
-    width: 14rem;
-  }
-
-  .prim_text {
-    display: none;
-  }
-
-  .label_cost {
-    font-size: 1.5rem;
-  }
-
-  .works_title {
-    display: none;
-  }
-
-  .feedback_all {
-    display: none;
-  }
-
-  .accordion {
-    top: 2rem;
-    max-width: 90%;
-    margin: auto;
-    margin-right: 2rem;
-    margin-left: 2rem;
-  }
-
-  .item_trigger {
-    line-height: 2rem;
-    font-size: 1.7rem;
-  }
-
-  .item_one {
-    line-height: 2rem;
-    font-size: 1.7rem;
-  }
-
-  .item_content {
-    line-height: 2rem;
-    font-size: 1.7rem;
-  }
-
-  .faq_title {
-    font-size: 2.5rem;
-    margin-top: 0;
-  }
-
-  .lead {
-    font-size: 1.4rem;
-    width: 14rem;
-  }
-
-  .footer_menu {
-    top: 2rem;
-    max-width: 90%;
-    margin-left: 2rem;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .container {
-    width: 273%;
-    margin: auto;
-  }
-}
-
-@media (max-width: 400px) {
-  .modal_input {
-    width: 18rem;
-    height: 3rem;
-    font-size: 2rem;
-    font-weight: bold;
   }
 }
